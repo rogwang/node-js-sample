@@ -1,11 +1,13 @@
-var fs = require('fs');
-var express = require('express');
-var app = express(express.logger());
+#!/usr/bin/env node
 
+var fs = require('fs');
+var express = require("express");
+//var app = express(express.logger());
+var app = express.createServer(express.logger());
 
 fs.readFile('index.html', "utf-8", function (err, data) {
   if (err) throw err;
-//  console.log(data);
+  console.log(data);
 });
 
 app.get('/', function(request, response) {
