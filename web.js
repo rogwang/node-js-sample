@@ -5,7 +5,7 @@ var app = express(express.logger());
 
 fs.readFile('index.html', "utf-8", function (err, data) {
   if (err) throw err;
-  console.log(data);
+//  console.log(data);
 });
 
 app.get('/', function(request, response) {
