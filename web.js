@@ -10,13 +10,12 @@ fs.readFile('index.html', "utf-8", function (err, data) {
   if (err) throw err;
 
 app.get('/', function(request, response) {
-  console.log(data);
+  //console.log(data);
   response.send(data);
 });
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
-//console.log(data);
   console.log("Listening on " + port);
 });
 
